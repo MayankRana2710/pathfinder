@@ -1,9 +1,11 @@
 @import 'tailwindcss';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body{
     background: #e9f5f3;
+}
+:root{
+  --first-color:#e9f5f3;
+  --second-color:#0b635b;
+  --border-color:#033430;
 }
 
