@@ -2,38 +2,36 @@ import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Card from '@/components/Card'
-import Image from 'next/image'
-import Link from 'next/link'
 
 const flashcard = [
   {
     topic: "Data Structure and Algorithms",
     desc: "Data Structure and Algorithms",
-    img: "/1.png",
+    img: "/dsa.svg",
     route:"dsa"
   },
   {
     topic: "Web Development",
     desc: "Web Development",
-    img: "/1.png",
+    img: "/webdev.svg",
     route:"webdev"
   },
   {
     topic: "Cyber Security",
     desc: "Cyber Security",
-    img: "/1.png",
+    img: "/cs.svg",
     route:"cs"
   },
   {
     topic: "Blockchain",
     desc: "Blockchain",
-    img: "/1.png",
+    img: "/blockchain.svg",
     route:"blockchain"
   },
   {
     topic: "Dev Operations",
     desc: "Dev Operations",
-    img: "/1.png",
+    img: "/devops.svg",
     route:"devops"
   }
 ]
@@ -41,10 +39,10 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <div className='flex flex-col h-[20vh] p-8 items-start justify-start'>
-        <h1 className='text-[#0b635b] font-bold mb-4 text-5xl'>lets get started</h1>
-        <p className='text-gray-700 text-2xl'>choose your path</p>
-      </div>
+      {/* <div className='home'>
+        <h1 className='home_text text-4xl '>LETS GET STARTED</h1>
+        <p className=' home_text text-2xl '>choose your path.....</p>
+      </div> */}
       <div className='flex flex-wrap gap-10 p-6'>
           {flashcard.map((element,index)=>(
               <Card

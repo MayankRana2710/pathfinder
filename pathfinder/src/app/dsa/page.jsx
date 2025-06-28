@@ -30,15 +30,16 @@ const edges = [
 
 const page = () => {
     return (
-        <div className='flex h-[100vh] w-[100vw] justify-center items-center' >
-            <div className='h-[80vh] w-[80vw]  border-4' style={{borderColor:"var(--second-color)"}}>
+        
+        <div className='topic_page' >
+            <div className='topic_content'>
                 <ReactFlow nodes={nodes} edges={edges}>
                     <Background
                         variant='dots'
                         color='#0b635b'
                         size={2}
                     />
-                    <Controls />
+                    <Controls/>
                 </ReactFlow>
             </div>
         </div>
