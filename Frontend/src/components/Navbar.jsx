@@ -1,6 +1,5 @@
 'use client';
 import React from 'react'
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -17,7 +16,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="nav">
+            <div className="nav justify-between">
                 <div className='nav_logo'>PATHFINDER</div>
                 <div className='nav_item'>
                     {final_path.map(i => (

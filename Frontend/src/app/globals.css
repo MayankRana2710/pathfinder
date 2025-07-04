@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap');
+
+@import 'tailwindcss';
+
+:root {
+  --first-color: black; /* Deep black base */
+  --second-color: #8e44ad; /* Metallic purple */
+  --blue-color:#3498db;
+  --highlight-color: #ffffff; /* White for contrast */
+  --text-color: black; /* Light grey */
+  --gradient: radial-gradient(circle at top left, #8e44ad, #3498db);
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--first-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+  font-family: inherit;
+}
+
+/* Page Layout */
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  padding: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.home_text {
+  color: var(--second-color);
+  font-weight: bold;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+
+
+/* Card Component */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 40vh;
+  justify-content: center;
+  /* border-width: 4px;
+  border-style: solid;
+  border-color: var(--second-color);*/
+  border-radius: 8px; 
+  background: var(--second-color);
+  color: var(--first-color);
+  /* box-shadow: 0px 4px 10px var(--highlight-color); */
+}
+
+.card_comp_1 {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card_comp_1_link {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: var(--highlight-color);
+}
+
+.card:hover {
+  background: var(--highlight-color);
+  color: var(--highlight-color);
+  box-shadow: 0px 4px 20px var(--highlight-color);
+}
+
+.card:hover .card_comp_1 {
+  background-color: var(--highlight-color);
+}
+
+.card:hover .card_comp_1_link {
+  color: var(--first-color);
+  transform: scale(1.05);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Navigation Bar */
+.nav {
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-weight: bold;
+  color: var(--first-color);
+}
+
+.nav_logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 48px;
+  color: var(--first-color);
+}
+
+.nav_item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: var(--highlight-color);
+}
+
+.nav_signin {
+  border: 1px solid var(--highlight-color);
+  border-radius: 2px;
+  padding: 6px;
+}
+
+.nav_signup {
+  border: 1px solid var(--second-color);
+  background-color: var(--second-color);
+  color: var(--highlight-color);
+  border-radius: 2px;
+  padding: 6px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.about_container {
+  @apply min-h-screen overflow-hidden transition-all;
+  background-color: var(--first-color);
+  background-image: var(--gradient);
+}
+
+.about_section {
+  @apply mt-12 max-w-3xl mx-auto;
+}
+
+.about_heading {
+  @apply text-4xl font-bold;
+  color: var(--accent-color);
+}
+
+.about_para {
+  @apply text-lg leading-relaxed tracking-normal;
+  color: var(--text-color);
+}
+
+.about_borderTop {
+  @apply border-t pt-10;
+  border-color: var(--second-color);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.tnav{
+  margin: 20px;
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.tnav_content{
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.horizontal{
+  margin-left: 10vw;
+  background: var(--gradient);
+  height: 2px;
+  width: 80vw;
+}
+
+.vertical{
+  /* margin-left: 10vw; */
+  background: var(--gradient);
+  height: 70vh;
+  width: 1px;
+  margin: 10;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.Tpage {
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: 30;
+  gap: 10;
+}
+
+.Tpage_content {
+  height: 70vh;
+  width: 75vw;
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--second-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.Tpage_about{
+  width: 25vw;
+  height: 70vh;
+  /* background-color: white; */
+  padding: 10;
+  border: 10px solid var(--second-color);
+  
+}

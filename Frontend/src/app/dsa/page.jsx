@@ -1,6 +1,6 @@
 import React from 'react'
-import { ReactFlow, Background, Controls } from '@xyflow/react';
-import '@xyflow/react/dist/style.css';
+import Tnav from '@/components/Tnav'
+import Tpage from '@/components/Tpage';
 
 
 const nodes = [
@@ -30,18 +30,12 @@ const edges = [
 
 const page = () => {
     return (
-        
-        <div className='topic_page' >
-            <div className='topic_content'>
-                <ReactFlow nodes={nodes} edges={edges}>
-                    <Background
-                        variant='dots'
-                        color='#0b635b'
-                        size={2}
-                    />
-                    <Controls/>
-                </ReactFlow>
-            </div>
+        <div>
+            <Tnav />
+            <Tpage
+                node={nodes}
+                edge={edges}
+            />
         </div>
     )
 }
