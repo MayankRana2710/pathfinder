@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 
-const schema = mongoose.schema({
+const schema = mongoose.Schema({
     username: {
         type: String,
         required: true,
