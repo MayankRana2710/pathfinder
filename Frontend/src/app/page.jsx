@@ -7,41 +7,37 @@ const flashcard = [
     topic: "Data Structure and Algorithms",
     desc: "Data Structure and Algorithms",
     img: "/dsa.svg",
-    route:"dsa"
+    route:"/topics/dsa"
   },
   {
     topic: "Web Development",
     desc: "Web Development",
     img: "/webdev.svg",
-    route:"webdev"
+    route:"/topics/webdev"
   },
   {
     topic: "Cyber Security",
     desc: "Cyber Security",
     img: "/cs.svg",
-    route:"cs"
+    route:"/topics/cs"
   },
   {
     topic: "Blockchain",
     desc: "Blockchain",
     img: "/blockchain.svg",
-    route:"blockchain"
+    route:"/topics/blockchain"
   },
   {
     topic: "Dev Operations",
     desc: "Dev Operations",
     img: "/devops.svg",
-    route:"devops"
+    route:"/topics/devops"
   }
 ]
 const page = () => {
   return (
     <div>
       <Navbar />
-      {/* <div className='home'>
-        <h1 className='home_text text-4xl '>LETS GET STARTED</h1>
-        <p className=' home_text text-2xl '>choose your path.....</p>
-      </div> */}
       <div className='flex flex-wrap gap-10 p-6'>
           {flashcard.map((element,index)=>(
               <Card

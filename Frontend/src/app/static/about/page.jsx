@@ -30,7 +30,7 @@ const page = () => {
                     As someone walking the path of learning and growth himself, he understands the need for calm, focused digital spaces that support you — not distract you. Pathfinder reflects that mindset.
                 </p>
 
-                <p className="about_para">
+                <p className="about_para mb-20">
                     Whether it's exploring new technologies, solving DSA challenges, or crafting web experiences from scratch — Mayank is always building, learning, and striving to improve, one step at a time.
                 </p>
             </div>

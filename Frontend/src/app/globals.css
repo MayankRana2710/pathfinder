@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap');
 
 @import 'tailwindcss';
-
 :root {
-  --first-color: black; /* Deep black base */
-  --second-color: #8e44ad; /* Metallic purple */
-  --blue-color:#3498db;
-  --highlight-color: #ffffff; /* White for contrast */
-  --text-color: black; /* Light grey */
+  --first-color: black;
+  --second-color: #8e44ad;
+  --blue-color: #3498db;
+  --highlight-color: #ffffff;
+  --text-color: black;
   --gradient: radial-gradient(circle at top left, #8e44ad, #3498db);
   font-family: 'Poppins', sans-serif;
 }
@@ -22,6 +21,10 @@ body {
 * {
   transition: all 0.3s ease-in-out;
   font-family: inherit;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Page Layout */
@@ -54,9 +57,9 @@ body {
   /* border-width: 4px;
   border-style: solid;
   border-color: var(--second-color);*/
-  border-radius: 8px; 
+  border-radius: 8px;
   background: var(--second-color);
-  color: var(--first-color);
+  /* color: var(--first-color); */
   /* box-shadow: 0px 4px 10px var(--highlight-color); */
 }
 
@@ -76,12 +79,7 @@ body {
 
 .card:hover {
   background: var(--highlight-color);
-  color: var(--highlight-color);
   box-shadow: 0px 4px 20px var(--highlight-color);
-}
-
-.card:hover .card_comp_1 {
-  background-color: var(--highlight-color);
 }
 
 .card:hover .card_comp_1_link {
@@ -92,18 +90,21 @@ body {
 /* ------------------------------------------------------------------------------------------------------------------ */
 /* Navigation Bar */
 .nav {
-  background: var(--gradient);
   display: flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: 8px 40px;
   font-weight: bold;
-  color: var(--first-color);
+  background: var(--gradient);            /*yeh ai ki madad se banaya hai, isme humare text par gradient daal sakte hai*/
+  color: var(--highlight-color);
 }
 
 .nav_logo {
-  font-family: 'Bungee', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
   font-size: 48px;
-  color: var(--first-color);
+  font-weight: bold;
+  color: var(--highlight-color);
+  text-underline-offset: 6px;
 }
 
 .nav_item {
@@ -113,10 +114,23 @@ body {
   color: var(--highlight-color);
 }
 
+.nav_keys:hover{
+  transform: scale(1.2);
+  /* box-shadow: 0 2px 10px var(--highlight-color); */
+}
+
 .nav_signin {
   border: 1px solid var(--highlight-color);
   border-radius: 2px;
   padding: 6px;
+}
+
+.nav_signin:hover{
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px var(--highlight-color);
+  border-color: var(--highlight-color);
+  background-color: var(--highlight-color);
+  color: var(--blue-color);
 }
 
 .nav_signup {
@@ -127,36 +141,55 @@ body {
   padding: 6px;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------ */
+.nav_signup:hover{
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px var(--highlight-color);
+  border-color: var(--highlight-color);
+  background-color: var(--highlight-color);
+  color: var(--second-color);
+}
 
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* About Page */
 .about_container {
-  @apply min-h-screen overflow-hidden transition-all;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out; /* default Tailwind transition */
   background-color: var(--first-color);
   background-image: var(--gradient);
 }
 
 .about_section {
-  @apply mt-12 max-w-3xl mx-auto;
+  margin-top: 3rem;              /* mt-12 */
+  max-width: 48rem;              /* max-w-3xl */
+  margin-left: auto;            /* mx-auto */
+  margin-right: auto;
 }
 
 .about_heading {
-  @apply text-4xl font-bold;
-  color: var(--accent-color);
+  font-size: 2.25rem;           /* text-4xl */
+  line-height: 2.5rem;
+  font-weight: 700;             /* font-bold */
+  color: var(--highlight-color);
 }
 
 .about_para {
-  @apply text-lg leading-relaxed tracking-normal;
+  font-size: 1.125rem;          /* text-lg */
+  line-height: 1.75rem;         /* leading-relaxed */
+  letter-spacing: 0.025em;      /* tracking-normal */
   color: var(--text-color);
 }
 
 .about_borderTop {
-  @apply border-t pt-10;
-  border-color: var(--second-color);
+  border-top-width: 5px;        /* border-t */
+  padding-top: 2.5rem;          /* pt-10 */
+  border-color: var(--first-color);
 }
 
-/* ------------------------------------------------------------------------------------------------------------------ */
 
-.tnav{
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Topic Page Navbar */
+.tnav {
   margin: 20px;
   font-size: 48px;
   display: flex;
@@ -165,20 +198,20 @@ body {
   font-weight: 600;
 }
 
-.tnav_content{
-  background: var(--gradient);
+.tnav_content {
+  background: var(--gradient);             /*yeh ai ki madad se banaya hai, isme humare text par gradient daal sakte hai*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.horizontal{
+.horizontal {
   margin-left: 10vw;
   background: var(--gradient);
   height: 2px;
   width: 80vw;
 }
 
-.vertical{
+.vertical {
   /* margin-left: 10vw; */
   background: var(--gradient);
   height: 70vh;
@@ -187,7 +220,7 @@ body {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
-
+/* topic page content */
 .Tpage {
   display: flex;
   height: 80vh;
@@ -208,11 +241,81 @@ body {
   font-weight: bold;
 }
 
-.Tpage_about{
+.Tpage_about {
   width: 25vw;
   height: 70vh;
   /* background-color: white; */
   padding: 10;
   border: 10px solid var(--second-color);
-  
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* signup/signin page */
+
+.sign_page {
+  background-color: var(--first-color);
+  background-image: var(--gradient);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign_box {
+  background-color: var(--highlight-color);
+  width: 30vw;
+  height: 50vh;
+  border-radius: 20px;
+  border: 2px solid var(--highlight-color);
+  box-shadow: 0 10px 20px var(--first-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign_comp_logo {
+  font-family: "Orbitron", sans-serif;
+  background: var(--gradient);           
+  -webkit-background-clip: text;         
+  -webkit-text-fill-color: transparent;  
+  font-size: 36px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.sign_comp_input {
+  display: flex;
+  flex-direction: column;
+  color: var(--first-color);
+  gap: 5px;
+  font-weight: bold;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.data_box{
+  border: 2px solid var(--first-color);
+  width: 20vw;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.button{
+  border: 2px solid var(--blue-color);
+  background-color: var(--blue-color);
+  color: var(--highlight-color);
+  width: 20vw;
+  padding: 8px;
+  border-radius: 10px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  cursor: pointer;
+}
+.button:active {
+  transform: scale(0.95);
+  background-color: var(--second-color);
+  border: 2px solid var(--second-color);
+  box-shadow: 0 2px 10px var(--second-color);
 }
